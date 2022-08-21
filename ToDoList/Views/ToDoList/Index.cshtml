@@ -5,11 +5,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>To Do List</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<h2>Add task</h2>
+<form class="form-inline">
+    <label asp-for="name">Task Name</label>
+    <input asp-for="name" placeholder="Enter task here" />
+    <button type="submit" value="submit" name="submit"></button>
+</form>
+
+<h2>Mark completed</h2>
+<form class="form-inline" action="/action_page.php">
+    <label asp-for="name">Task Name</label>
+    <input asp-for="name" placeholder="Enter task here" />
+    <button type="submit" value="completed" name="completed"></button>
+</form>
+
+
 <table class="table">
     <thead>
         <tr>

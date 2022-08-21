@@ -12,5 +12,11 @@ namespace ToDoList.Controllers
 
             return View("Index", toDo);
         }
+        [HttpPost]
+        public IActionResult Index(Models.ToDoList ToDoList, String submit, string edit)
+        {
+
+            return View("Index");
+        }
     }
 }
